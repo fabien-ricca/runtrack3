@@ -14,9 +14,7 @@ function fizzbuzz(){
         else{
             console.log(i);
         }
-        
     }
-    
 }
 
 fizzbuzz();
