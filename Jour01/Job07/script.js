@@ -39,6 +39,6 @@ function jourtravaille(p1, p3, p2){
     
 }
 
-console.log("Choisissez la date souhaitée. Par exemple pour le 16 janvier 2023 : 2023, 1, 16");
+console.log("Choisissez la date souhaitée. Par exemple pour le 16 janvier 2023 : jourtravaille(2023, 1, 16)");
 
 jourtravaille();
