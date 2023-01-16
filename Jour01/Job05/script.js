@@ -1,7 +1,7 @@
 function afficherjourssemaine(){
     let jourssemaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
 
-    for(let i=0; typeof( jourssemaine[i] ) != "undefined"; i++){
+    for(let i=0; typeof(jourssemaine[i] ) != "undefined"; i++){
             console.log(jourssemaine[i]);
     }
     
