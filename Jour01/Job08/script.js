@@ -1,17 +1,21 @@
+// Fonction pour déterminer si un nombre est premier ou non
 function isPrime(nbr){
-    let test = 0;
-    for(let i=1; i<=nbr; i++){
-        if(i % nbr == 0){
-            test ++;
+    for(let i=2; i<=nbr; i++){
+        if(nbr % i == 0 && nbr != i){
+            return false;
         }
     }
+    return true;
+}
 
-    if (test == 2){
-        console.log("Ok");
+// Fonction qui additionne deux nombres s'ils sont premiers tout les deux
+function sommenombrespremiers(p1, p2){
+    if(isPrime(p1) && isPrime(p2)){
+        return p1 + p2;
     }
     else{
-        console.log("Pas ok");
+        return "Cette fonction nécessite deux nombres premiers pour fonctionner";
     }
 }
 
-isPrime(2);
+console.log(sommenombrespremiers(19, 23));
