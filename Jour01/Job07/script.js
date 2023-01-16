@@ -1,7 +1,7 @@
 
-let date = new Date();              // on récupère la date du jour
 
-function jourtravaille(date){
+function jourtravaille(p1, p3, p2){
+    let date = new Date(p1, p2-1, p3);              // on récupère la date rentrée en input (-1 au mois pour correspondre à l'index du mois)
     let indexDay = date.getDay();   // On récupère le jour, l'index du jour (de 0 à 6), le mois(de 0 à 11) et l'année
     let day = date.getDate();
     let idmonth = date.getMonth();
@@ -10,7 +10,8 @@ function jourtravaille(date){
     let letterMonth ="";
 
 
-    let feries = ["16 0", "1 0", "10 3", "1 4"];            // Liste contenant les jours feriés "jour mois"
+    // Liste contenant les jours feriés "jour mois"
+    let feries = ["16 0", "1 0", "10 3", "1 4", "8 4", "18 4", "29 4", "14 06", "15 07", "1 10", "11 10", "25 11"];
 
     // Pour convertir le mois de chiffre en lettre (0 => Janvier)
     let mois =["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"];
@@ -33,9 +34,11 @@ function jourtravaille(date){
 
     // Sinon c'est un jour travaillé
     else{
-        console.log("Le " + day + " " + idmonth + " " + year + " est un jour travaillé.");
+        console.log("Le " + day + " " + letterMonth + " " + year + " est un jour travaillé.");
     }
     
 }
 
-jourtravaille(date);
+console.log("Choisissez la date souhaitée. Par exemple pour le 16 janvier 2023 : 2023, 1, 16");
+
+jourtravaille();
