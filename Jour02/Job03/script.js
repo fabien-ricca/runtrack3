@@ -3,7 +3,7 @@ const button = document.querySelector("#button");               // On cible le b
 
 
 function addone(){  
-    compteur = document.querySelector("#compteur");             // On récupère la balise <P id="compteur"> et son contenu
+    let compteur = document.querySelector("#compteur");             // On récupère la balise <P id="compteur"> et son contenu
     compteur.innerHTML = parseInt(compteur.innerHTML)+1;        // On récupère le contenu, on le converti en int et on le modifie en lui ajoutant 1
 }
 
