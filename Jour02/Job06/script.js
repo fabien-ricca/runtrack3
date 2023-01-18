@@ -13,6 +13,7 @@ body.addEventListener("keydown", (event) => {                        // Quand l'
 
     if(cheatCode.length == konamiCode.length){                                  // Si la liste cheatCode contient autant d'éléments que konamiCode
         if(konamiCode.every((value, index) => value === cheatCode[index])){         // On vérifie que les deux tableaux soient identiques
+            alert("Cheat Code Activated");
             body.style.backgroundImage = "url(plateforme.png)";                     // S'ils le sont, on affiche une image
         }
     }
